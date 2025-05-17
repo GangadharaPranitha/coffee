@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Coffee Bliss</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Coffee Bliss Logo" class="logo-img"> Coffee Bliss
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <h1>Our Menu</h1>
+        <div id="menu-container" class="menu-grid">
+            <!-- Menu items will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Show Cart Button -->
+    <div class="cart-btn-container">
+        <button id="showCartBtn" class="btn cart-btn" onclick="showCartModal()">Show Cart</button>
+    </div>
+
+    <!-- Modal for Item Details -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="itemImage" src="" alt="Menu Item">
+            <h2 id="itemName"></h2>
+            <p id="itemPrice"></p>
+            <button id="addToCartBtn" class="btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cartOverlay" onclick="closeCartModal()"></div>
+
+    <!-- Cart Modal (Box) -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            
+            <h2>Your Cart</h2>
+            <div id="cartItems" class="cart-box"></div>
+            <div class="cart-total">
+                <p>Total: <span id="cartTotal">₹0</span></p>
+            </div>
+            <button class="btn checkout-btn" onclick="checkout()">Checkout</button>
+            <button class="btn back-btn" onclick="goBack()">Back</button>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Coffee Bliss. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
